@@ -33,7 +33,7 @@ public class OrderDatasourceConfiguration {
 	}
 
 	@Bean(name = "orderDatasource")
-	@ConfigurationProperties(prefix = "spring.datasource.order")
+	@ConfigurationProperties(prefix = "sqlserver.datasource")
 	public DataSource datasource(@Qualifier("orderProperties") DataSourceProperties properties) {
 		return properties.initializeDataSourceBuilder().build();
 	}
